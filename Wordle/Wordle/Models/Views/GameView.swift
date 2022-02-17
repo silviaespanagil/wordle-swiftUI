@@ -22,7 +22,7 @@ struct GameView: View {
                     Button {
                         
                     } label: {
-                        Image(systemName: "questionmar.circle")
+                        Image(systemName: "questionmark.circle")
                     }
                 }
                 ToolbarItem(placement: .principal) {
