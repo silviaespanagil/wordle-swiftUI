@@ -59,6 +59,7 @@
 		A71EB64727BE5D8200F474A0 /* Wordle */ = {
 			isa = PBXGroup;
 			children = (
+				A71EB65E27BE687200F474A0 /* Views */,
 				A71EB65B27BE67D700F474A0 /* Models */,
 				A71EB65827BE65BF00F474A0 /* Extensions */,
 				A71EB64827BE5D8200F474A0 /* WordleApp.swift */,
@@ -88,7 +89,6 @@
 		A71EB65B27BE67D700F474A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A71EB65E27BE687200F474A0 /* Views */,
 				A71EB65C27BE67EB00F474A0 /* Guess.swift */,
 			);
 			path = Models;
