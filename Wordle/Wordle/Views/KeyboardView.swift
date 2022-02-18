@@ -25,6 +25,8 @@ struct KeyboardView: View {
                     
                     LetterButtonView(letter: letter)
                 }
+                .disabled(dataModel.disabledKey)
+                .opacity(dataModel.disabledKey ? 0.4 : 1)
             }
             HStack(spacing: 2) {
                 
@@ -32,6 +34,8 @@ struct KeyboardView: View {
                     
                     LetterButtonView(letter: letter)
                 }
+                .disabled(dataModel.disabledKey)
+                .opacity(dataModel.disabledKey ? 0.4 : 1)
             }
             
             HStack(spacing: 2) {
@@ -47,11 +51,16 @@ struct KeyboardView: View {
                 .frame(width: 60, height: 50)
                 .foregroundColor(.primary)
                 .background(Color.unused)
+                .disabled(dataModel.currentWord.count < 5 || !dataModel.inPlay)
+                .opacity((dataModel.currentWord.count < 5 || !dataModel.inPlay) ? 0.4 : 1)
                 
                 ForEach(thirdRowArray, id: \.self) { letter in
                     
                     LetterButtonView(letter: letter)
                 }
+                .disabled(dataModel.disabledKey)
+                .opacity(dataModel.disabledKey ? 0.4 : 1)
+                
                 Button {
                     
                     dataModel.removeLetterFromCurrentWord()
@@ -63,6 +72,8 @@ struct KeyboardView: View {
                         .foregroundColor(.primary)
                         .background(Color.unused)
                 }
+                .disabled(dataModel.currentWord.count == 0 || !dataModel.inPlay)
+                .opacity((dataModel.currentWord.count == 0 || !dataModel.inPlay) ? 0.4 : 1)
             }
         }
     }
