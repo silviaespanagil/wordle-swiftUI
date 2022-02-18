@@ -10,7 +10,7 @@ import SwiftUI
 struct Guess {
     
     let index: Int
-    var word = ""
+    var word = "     "
     var backgroundColors = [Color](repeating: .systemBackground, count: 5)
     var cardFlipped = [Bool](repeating: false, count: 5)
     var guessLetters: [String] {
