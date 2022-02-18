@@ -21,7 +21,6 @@ struct GuessView: View {
                     .foregroundColor(.primary)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                     .background(Color.systemBackground)
-                    .font(.system(size: 3))
                     .border(Color(.secondaryLabel))
             }
         }
