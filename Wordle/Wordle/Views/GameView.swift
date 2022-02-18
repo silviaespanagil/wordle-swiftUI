@@ -21,12 +21,11 @@ struct GameView: View {
                 
                 VStack(spacing: 3) {
                     
-                    GuessView(guess: $dataModel.guesses[0])
-                    GuessView(guess: $dataModel.guesses[1])
-                    GuessView(guess: $dataModel.guesses[2])
-                    GuessView(guess: $dataModel.guesses[3])
-                    GuessView(guess: $dataModel.guesses[4])
-                    GuessView(guess: $dataModel.guesses[5])
+                    ForEach(0...5, id:  \.self) { index in
+                        
+                        GuessView(guess: $dataModel.guesses[index])
+                            .modifier(Shake(animatableData: CGFloat(dataModel.incorrectAttempts[index])))
+                    }
                 }
                 .frame(width: Global.boardWidht, height: 6 * Global.boardWidht / 5)
                 
