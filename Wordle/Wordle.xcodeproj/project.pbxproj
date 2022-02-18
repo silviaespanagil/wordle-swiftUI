@@ -15,6 +15,10 @@
 		A71EB65A27BE65D000F474A0 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB65927BE65CF00F474A0 /* Color+Extension.swift */; };
 		A71EB65D27BE67EB00F474A0 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB65C27BE67EB00F474A0 /* Guess.swift */; };
 		A71EB66027BE688600F474A0 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB65F27BE688600F474A0 /* GuessView.swift */; };
+		A71EB66327BE704100F474A0 /* WordleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB66227BE704100F474A0 /* WordleDataModel.swift */; };
+		A71EB66527BE712A00F474A0 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB66427BE712A00F474A0 /* Global.swift */; };
+		A71EB66727BE83BC00F474A0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB66627BE83BC00F474A0 /* KeyboardView.swift */; };
+		A71EB66927BE83F100F474A0 /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB66827BE83F100F474A0 /* LetterButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		A71EB65927BE65CF00F474A0 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		A71EB65C27BE67EB00F474A0 /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 		A71EB65F27BE688600F474A0 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		A71EB66227BE704100F474A0 /* WordleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleDataModel.swift; sourceTree = "<group>"; };
+		A71EB66427BE712A00F474A0 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		A71EB66627BE83BC00F474A0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		A71EB66827BE83F100F474A0 /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		A71EB64727BE5D8200F474A0 /* Wordle */ = {
 			isa = PBXGroup;
 			children = (
+				A71EB66127BE703200F474A0 /* ViewModels */,
 				A71EB65E27BE687200F474A0 /* Views */,
 				A71EB65B27BE67D700F474A0 /* Models */,
 				A71EB65827BE65BF00F474A0 /* Extensions */,
@@ -90,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A71EB65C27BE67EB00F474A0 /* Guess.swift */,
+				A71EB66427BE712A00F474A0 /* Global.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,8 +109,18 @@
 			children = (
 				A71EB64A27BE5D8200F474A0 /* GameView.swift */,
 				A71EB65F27BE688600F474A0 /* GuessView.swift */,
+				A71EB66627BE83BC00F474A0 /* KeyboardView.swift */,
+				A71EB66827BE83F100F474A0 /* LetterButtonView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A71EB66127BE703200F474A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A71EB66227BE704100F474A0 /* WordleDataModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,10 +195,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71EB64B27BE5D8200F474A0 /* GameView.swift in Sources */,
+				A71EB66727BE83BC00F474A0 /* KeyboardView.swift in Sources */,
 				A71EB66027BE688600F474A0 /* GuessView.swift in Sources */,
 				A71EB65A27BE65D000F474A0 /* Color+Extension.swift in Sources */,
 				A71EB65D27BE67EB00F474A0 /* Guess.swift in Sources */,
+				A71EB66327BE704100F474A0 /* WordleDataModel.swift in Sources */,
 				A71EB64927BE5D8200F474A0 /* WordleApp.swift in Sources */,
+				A71EB66927BE83F100F474A0 /* LetterButtonView.swift in Sources */,
+				A71EB66527BE712A00F474A0 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
