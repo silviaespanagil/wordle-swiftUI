@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// https://www.objc.io/blog/2019/10/01/swiftui-shake-animation/
+
 struct Shake: GeometryEffect {
     
     var amount: CGFloat = 10
