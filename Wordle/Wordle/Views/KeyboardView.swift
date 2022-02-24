@@ -25,8 +25,8 @@ struct KeyboardView: View {
                     
                     LetterButtonView(letter: letter)
                 }
-                .disabled(dataModel.disabledKey)
-                .opacity(dataModel.disabledKey ? 0.4 : 1)
+                .disabled(dataModel.disabledKeys)
+                .opacity(dataModel.disabledKeys ? 0.4 : 1)
             }
             HStack(spacing: 2) {
                 
@@ -34,8 +34,8 @@ struct KeyboardView: View {
                     
                     LetterButtonView(letter: letter)
                 }
-                .disabled(dataModel.disabledKey)
-                .opacity(dataModel.disabledKey ? 0.4 : 1)
+                .disabled(dataModel.disabledKeys)
+                .opacity(dataModel.disabledKeys ? 0.4 : 1)
             }
             
             HStack(spacing: 2) {
@@ -58,8 +58,8 @@ struct KeyboardView: View {
                     
                     LetterButtonView(letter: letter)
                 }
-                .disabled(dataModel.disabledKey)
-                .opacity(dataModel.disabledKey ? 0.4 : 1)
+                .disabled(dataModel.disabledKeys)
+                .opacity(dataModel.disabledKeys ? 0.4 : 1)
                 
                 Button {
                     
