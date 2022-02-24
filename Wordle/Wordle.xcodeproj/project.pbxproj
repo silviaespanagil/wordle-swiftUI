@@ -20,6 +20,7 @@
 		A71EB66727BE83BC00F474A0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB66627BE83BC00F474A0 /* KeyboardView.swift */; };
 		A71EB66927BE83F100F474A0 /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB66827BE83F100F474A0 /* LetterButtonView.swift */; };
 		A71EB67427BFDE6400F474A0 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB67327BFDE6400F474A0 /* Shake.swift */; };
+		A71EB67627C3ADB200F474A0 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB67527C3ADB200F474A0 /* FlipView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A71EB66627BE83BC00F474A0 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		A71EB66827BE83F100F474A0 /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		A71EB67327BFDE6400F474A0 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+		A71EB67527C3ADB200F474A0 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				A71EB67027BFDE3400F474A0 /* Animations */,
-				A71EB66127BE703200F474A0 /* ViewModels */,
-				A71EB65E27BE687200F474A0 /* Views */,
 				A71EB65B27BE67D700F474A0 /* Models */,
+				A71EB65E27BE687200F474A0 /* Views */,
+				A71EB66127BE703200F474A0 /* ViewModels */,
 				A71EB65827BE65BF00F474A0 /* Extensions */,
 				A71EB64827BE5D8200F474A0 /* WordleApp.swift */,
 				A71EB64C27BE5D8400F474A0 /* Assets.xcassets */,
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				A71EB67327BFDE6400F474A0 /* Shake.swift */,
+				A71EB67527C3ADB200F474A0 /* FlipView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71EB64B27BE5D8200F474A0 /* GameView.swift in Sources */,
+				A71EB67627C3ADB200F474A0 /* FlipView.swift in Sources */,
 				A71EB66727BE83BC00F474A0 /* KeyboardView.swift in Sources */,
 				A71EB66027BE688600F474A0 /* GuessView.swift in Sources */,
 				A71EB65A27BE65D000F474A0 /* Color+Extension.swift in Sources */,
