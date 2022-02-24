@@ -34,34 +34,39 @@ struct GameView: View {
                 KeyboardView()
                     .scaleEffect(Global.keyboardScale)
                     .padding(.top)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                
+                Spacer()
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    
+                    Button {
                         
+                    } label: {
+                        
+                        Image(systemName: "questionmark.circle")
+                    }
+                }
+                ToolbarItem(placement: .principal) {
+                    
+                    Text("WORDLE")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.primary)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack {
                         Button {
                             
                         } label: {
-                            Image(systemName: "questionmark.circle")
+                            Image(systemName: "chart.bar")
                         }
-                    }
-                    ToolbarItem(placement: .principal) {
-                        Text("WORDLE")
-                            .font(.largeTitle)
-                            .fontWeight(.heavy)
-                            .foregroundColor(.primary)
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        HStack {
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "chart.bar")
-                            }
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "gearshape.fill")
-                            }
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "gearshape.fill")
                         }
                     }
                 }
