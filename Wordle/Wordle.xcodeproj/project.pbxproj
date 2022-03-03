@@ -21,6 +21,9 @@
 		A71EB66927BE83F100F474A0 /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB66827BE83F100F474A0 /* LetterButtonView.swift */; };
 		A71EB67427BFDE6400F474A0 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB67327BFDE6400F474A0 /* Shake.swift */; };
 		A71EB67627C3ADB200F474A0 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71EB67527C3ADB200F474A0 /* FlipView.swift */; };
+		A77B055427CFAF4400218098 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77B055327CFAF4400218098 /* ToastView.swift */; };
+		A77B055627CFC92000218098 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77B055527CFC92000218098 /* Statistic.swift */; };
+		A77B055827CFD08C00218098 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77B055727CFD08C00218098 /* StatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		A71EB66827BE83F100F474A0 /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		A71EB67327BFDE6400F474A0 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		A71EB67527C3ADB200F474A0 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		A77B055327CFAF4400218098 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		A77B055527CFC92000218098 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
+		A77B055727CFD08C00218098 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 			children = (
 				A71EB65C27BE67EB00F474A0 /* Guess.swift */,
 				A71EB66427BE712A00F474A0 /* Global.swift */,
+				A77B055527CFC92000218098 /* Statistic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +123,8 @@
 				A71EB65F27BE688600F474A0 /* GuessView.swift */,
 				A71EB66627BE83BC00F474A0 /* KeyboardView.swift */,
 				A71EB66827BE83F100F474A0 /* LetterButtonView.swift */,
+				A77B055327CFAF4400218098 /* ToastView.swift */,
+				A77B055727CFD08C00218098 /* StatsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 				A71EB67627C3ADB200F474A0 /* FlipView.swift in Sources */,
 				A71EB66727BE83BC00F474A0 /* KeyboardView.swift in Sources */,
 				A71EB66027BE688600F474A0 /* GuessView.swift in Sources */,
+				A77B055427CFAF4400218098 /* ToastView.swift in Sources */,
 				A71EB65A27BE65D000F474A0 /* Color+Extension.swift in Sources */,
 				A71EB65D27BE67EB00F474A0 /* Guess.swift in Sources */,
 				A71EB66327BE704100F474A0 /* WordleDataModel.swift in Sources */,
@@ -219,6 +229,8 @@
 				A71EB64927BE5D8200F474A0 /* WordleApp.swift in Sources */,
 				A71EB66927BE83F100F474A0 /* LetterButtonView.swift in Sources */,
 				A71EB66527BE712A00F474A0 /* Global.swift in Sources */,
+				A77B055827CFD08C00218098 /* StatsView.swift in Sources */,
+				A77B055627CFC92000218098 /* Statistic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
