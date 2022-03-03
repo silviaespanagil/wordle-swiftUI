@@ -11,6 +11,8 @@ class WordleDataModel: ObservableObject {
     
     @Published var guesses: [Guess] = []
     @Published var incorrectAttempts = [Int](repeating: 0, count: 6)
+    @Published var toastText: String?
+    @Published var showStats = false
     
     var keyColors = [String : Color]()
     var matchedLetters = [String]()
@@ -20,6 +22,8 @@ class WordleDataModel: ObservableObject {
     var tryIndex = 0
     var inPlay = false
     var gameOver = false
+    var toastWords = ["Well, that was fast 🏆", "You're the best!🥳", "Oleeee 💃🏽", "Good work 🦾", "Yayyyy, you did it 🎉", "Well, that was close 😰"]
+    var currentStat: Statistic
     
     var gameStarted: Bool {
         
@@ -33,6 +37,7 @@ class WordleDataModel: ObservableObject {
     
     init() {
         
+        currentStat = Statistic.loadStat()
         newGame()
     }
     
@@ -78,6 +83,8 @@ class WordleDataModel: ObservableObject {
             gameOver = true
             print("You Win")
             setCurrentGuessColors()
+            currentStat.update(win: true, index: tryIndex)
+            showToast(with: toastWords[tryIndex])
             inPlay = false
         } else {
             
@@ -89,9 +96,10 @@ class WordleDataModel: ObservableObject {
                 currentWord = ""
                 if tryIndex == 6 {
                     
+                    currentStat.update(win: false)
                     gameOver = true
                     inPlay = false
-                    print("You lose")
+                    showToast(with: selectedWord)
                 }
             } else {
                 
@@ -99,6 +107,7 @@ class WordleDataModel: ObservableObject {
                     
                     self.incorrectAttempts[tryIndex] += 1
                 }
+                showToast(with: "That is not a word 🤔")
                 incorrectAttempts[tryIndex] = 0
             }
         }
@@ -145,9 +154,9 @@ class WordleDataModel: ObservableObject {
                 }
                 
                 if misplacedLetters.contains(guessLetter) {
-
+                    
                     if let index = misplacedLetters.firstIndex(where: {$0 == guessLetter}) {
-
+                        
                         misplacedLetters.remove(at: index)
                     }
                 }
@@ -192,6 +201,23 @@ class WordleDataModel: ObservableObject {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(col) * 0.2) {
                 self.guesses[row].cardFlipped[col].toggle()
+            }
+        }
+    }
+    
+    func showToast(with text: String?) {
+        
+        withAnimation{
+            toastText = text
+        }
+        
+        withAnimation(Animation.linear(duration: 0.2).delay(3)) {
+            toastText = nil
+            
+            if gameOver {
+                withAnimation(Animation.linear(duration: 0.2).delay(3)) {
+                    showStats.toggle()
+                }
             }
         }
     }
