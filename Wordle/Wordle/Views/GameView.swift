@@ -11,6 +11,7 @@ struct GameView: View {
     
     @EnvironmentObject var dataModel: WordleDataModel
     @State private var showSettings: Bool = false
+    @State private var showHelp: Bool = false
     
     var body: some View {
         
@@ -60,7 +61,7 @@ struct GameView: View {
                             }
                             
                             Button {
-                                
+                                showHelp.toggle()
                             } label: {
                                 
                                 Image(systemName: "questionmark.circle")
@@ -73,7 +74,7 @@ struct GameView: View {
                         Text("WORDLE")
                             .font(.largeTitle)
                             .fontWeight(.heavy)
-                            .foregroundColor(.primary)
+                            .foregroundColor(dataModel.hardMode ? Color(.systemRed) : .primary)
                     }
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -105,5 +106,8 @@ struct GameView: View {
             }
         }
         .navigationViewStyle(.stack)
+        .sheet(isPresented: $showHelp) {
+            HelpView()
+        }
     }
 }
