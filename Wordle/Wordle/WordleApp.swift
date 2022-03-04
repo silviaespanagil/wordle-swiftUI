@@ -9,7 +9,9 @@ import SwiftUI
 
 @main
 struct WordleApp: App {
+    
     @StateObject var dataModel = WordleDataModel()
+    @StateObject var colorSchemeManager = ColorSchemeManager()
     
     var body: some Scene {
         
@@ -17,6 +19,11 @@ struct WordleApp: App {
             
             GameView()
                 .environmentObject(dataModel)
+                .environmentObject(colorSchemeManager)
+                .onAppear {
+                    
+                    colorSchemeManager.applyColorScheme()
+                }
         }
     }
 }
