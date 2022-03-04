@@ -14,9 +14,12 @@ class WordleDataModel: ObservableObject {
     @Published var toastText: String?
     @Published var showStats = false
     
+    @AppStorage("hardMode") var hardMode = false
+    
     var keyColors = [String : Color]()
     var matchedLetters = [String]()
     var misplacedLetters = [String]()
+    var correctlyPlacedLetters = [String]()
     var selectedWord = ""
     var currentWord = ""
     var tryIndex = 0
@@ -45,6 +48,7 @@ class WordleDataModel: ObservableObject {
         
         populateDefaults()
         selectedWord = Global.commonWords.randomElement()!
+        correctlyPlacedLetters = [String](repeating:"-", count: 5)
         currentWord = ""
         inPlay = true
         tryIndex = 0
@@ -91,6 +95,16 @@ class WordleDataModel: ObservableObject {
             if verifyWord() {
                 
                 print("Valid word")
+                if hardMode {
+                    if let toastString = hardModeCorrectCheck() {
+                        showToast(with: toastString)
+                        return
+                    }
+                    if let toastString = hardModeMisplacedCheck() {
+                        showToast(with: toastString)
+                        return
+                    }
+                }
                 setCurrentGuessColors()
                 tryIndex += 1
                 currentWord = ""
@@ -130,6 +144,35 @@ class WordleDataModel: ObservableObject {
         UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: currentWord)
     }
     
+    func hardModeCorrectCheck() -> String? {
+
+        let guessLetters = guesses[tryIndex].guessLetters
+
+        for i in 0...4 {
+
+            if correctlyPlacedLetters[i] != "-" {
+                if guessLetters[i] != correctlyPlacedLetters[i] {
+                    let formatter = NumberFormatter()
+                    formatter.numberStyle = .ordinal
+                    return "\(formatter.string(for: i + 1)!) letter must be \(correctlyPlacedLetters[i])."
+                }
+            }
+        }
+        return nil
+    }
+    
+    func hardModeMisplacedCheck() -> String? {
+        
+        let guessLetters = guesses[tryIndex].guessLetters
+        
+        for letter in misplacedLetters {
+            if !guessLetters.contains(letter) {
+                return ("Must contain the letter \(letter)")
+            }
+        }
+        return nil
+    }
+    
     func setCurrentGuessColors() {
         
         let correctLetters = selectedWord.map { String($0) }
@@ -160,6 +203,7 @@ class WordleDataModel: ObservableObject {
                         misplacedLetters.remove(at: index)
                     }
                 }
+                correctlyPlacedLetters[index] = correctLetter
                 frequency[guessLetter]! -= 1
             }
         }

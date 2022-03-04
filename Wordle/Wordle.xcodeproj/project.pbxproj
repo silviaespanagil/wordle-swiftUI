@@ -27,6 +27,7 @@
 		A77B055A27D2092700218098 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77B055927D2092700218098 /* UIWindow+Extension.swift */; };
 		A77B055C27D22C2C00218098 /* ColorSchemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77B055B27D22C2C00218098 /* ColorSchemeManager.swift */; };
 		A77B056027D2300900218098 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77B055F27D2300900218098 /* SettingsView.swift */; };
+		A77B056227D258A400218098 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77B056127D258A400218098 /* HelpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		A77B055927D2092700218098 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		A77B055B27D22C2C00218098 /* ColorSchemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeManager.swift; sourceTree = "<group>"; };
 		A77B055F27D2300900218098 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A77B056127D258A400218098 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				A77B055327CFAF4400218098 /* ToastView.swift */,
 				A77B055727CFD08C00218098 /* StatsView.swift */,
 				A77B055F27D2300900218098 /* SettingsView.swift */,
+				A77B056127D258A400218098 /* HelpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				A71EB64927BE5D8200F474A0 /* WordleApp.swift in Sources */,
 				A71EB66927BE83F100F474A0 /* LetterButtonView.swift in Sources */,
 				A77B055A27D2092700218098 /* UIWindow+Extension.swift in Sources */,
+				A77B056227D258A400218098 /* HelpView.swift in Sources */,
 				A77B056027D2300900218098 /* SettingsView.swift in Sources */,
 				A71EB66527BE712A00F474A0 /* Global.swift in Sources */,
 				A77B055827CFD08C00218098 /* StatsView.swift in Sources */,
