@@ -10,6 +10,7 @@ import SwiftUI
 struct GameView: View {
     
     @EnvironmentObject var dataModel: WordleDataModel
+    @State private var showSettings: Bool = false
     
     var body: some View {
         
@@ -40,6 +41,7 @@ struct GameView: View {
                     Spacer()
                 }
                 .navigationBarTitleDisplayMode(.inline)
+                .disabled(dataModel.showStats)
                 .overlay(ToastView(toastText: dataModel.toastText ?? "").offset(y: 20), alignment: .top)
                 .toolbar {
                     
@@ -87,14 +89,16 @@ struct GameView: View {
                             }
                             
                             Button {
-                                
+                                showSettings.toggle()
                             } label: {
                                 Image(systemName: "gearshape.fill")
                             }
                         }
                     }
                 }
-                
+                .sheet(isPresented: $showSettings) {
+                    SettingsView()
+                }
             }
             if dataModel.showStats {
                 StatsView()
