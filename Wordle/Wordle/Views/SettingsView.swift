@@ -10,6 +10,8 @@ import SwiftUI
 struct SettingsView: View {
 
     @EnvironmentObject var colorSchemeManager: ColorSchemeManager
+    @EnvironmentObject var dataModel: WordleDataModel
+    
 //    @Environment(\.dismiss) var dismiss * Only available on ios 15+ *
     @Environment(\.presentationMode) var presentationMode
     
@@ -18,6 +20,8 @@ struct SettingsView: View {
         NavigationView {
             
             VStack {
+                
+                Toggle("Hard Mode", isOn: $dataModel.hardMode)
                 
                 Text("Change Theme")
                 Picker("Display Mode", selection: $colorSchemeManager.colorScheme) {
@@ -52,5 +56,6 @@ struct SettingsView_Previews: PreviewProvider {
         
         SettingsView()
             .environmentObject(ColorSchemeManager())
+            .environmentObject(WordleDataModel())
     }
 }
