@@ -84,13 +84,18 @@ struct StatsView: View {
                         Spacer()
                     }
                 }
-//                if dataModel.gameOver {
+                if dataModel.gameOver {
+                    
                     HStack {
+                        
                         Spacer()
                         Button {
+                            
                             dataModel.shareResult()
                         } label: {
+                            
                             HStack {
+                                
                                 Image(systemName: "square.and.arrow.up")
                                 Text("Share")
                             }
@@ -101,7 +106,7 @@ struct StatsView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
                     }
-//                }
+                }
             }
             Spacer()
         }
@@ -113,12 +118,12 @@ struct StatsView: View {
         .shadow(color: .black.opacity(0.3), radius: 10)
         .offset(y: -7)
         .frame(minWidth: 0,
-                              maxWidth: .infinity,
-                              minHeight: 0,
-                              maxHeight: .infinity)
+               maxWidth: .infinity,
+               minHeight: 0,
+               maxHeight: .infinity)
         .background(Color.correct.opacity(0.5))
         .ignoresSafeArea()
-       
+        
     }
 }
 struct StatsView_Previews: PreviewProvider {

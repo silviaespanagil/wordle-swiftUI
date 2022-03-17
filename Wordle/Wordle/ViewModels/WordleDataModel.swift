@@ -145,11 +145,11 @@ class WordleDataModel: ObservableObject {
     }
     
     func hardModeCorrectCheck() -> String? {
-
+        
         let guessLetters = guesses[tryIndex].guessLetters
-
+        
         for i in 0...4 {
-
+            
             if correctlyPlacedLetters[i] != "-" {
                 if guessLetters[i] != correctlyPlacedLetters[i] {
                     let formatter = NumberFormatter()
